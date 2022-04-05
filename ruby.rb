@@ -1,14 +1,15 @@
-
-puts "enter your number"
-num = gets.to_i
-fact = 1
-if (num==0)
-	puts "error"
-else
-	i=1
-	while (i<=num)
-		fact = fact*i
-		i+=1	
+puts "Enter the Number"
+num= gets.to_i
+count=0
+i=2
+while (i<=num)
+	if(num%i==0)
+		count+=1
 	end
+	i+=1
 end
-	puts "factorial of #{num} is #{fact}"
+	if (count>1)
+		puts ("Not prime")
+	else
+		puts("prime")	
+	end
